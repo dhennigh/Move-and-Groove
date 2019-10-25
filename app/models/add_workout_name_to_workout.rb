@@ -1,0 +1,2 @@
+class AddWorkoutNameToWorkout < ApplicationRecord
+end
