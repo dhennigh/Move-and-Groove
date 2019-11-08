@@ -17,13 +17,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :activity %>
-    <%= form.text_field :name %>
-  </div>
-
-  <div class="field">
     <%= form.label :workout %>
-    <%= collection_select(:workout, :name, Workout.all, :id, :name, {}, { :multiple => false }) %>
+    <%= collection_select(:activity, :workout_id, Workout.all.sort { |a, b| a.name <=> b.name }, :id, :name, {}, { :multiple => false }) %>
   </div>
 
   <div class="field">

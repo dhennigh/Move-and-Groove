@@ -24,11 +24,11 @@
         <div class="navbar-nav">
           <ul class="nav navbar-nav navbar-right">
             <% if user_signed_in? %>
-              <li class="btn btn-warning mx-1"><%= link_to('Record Workout', @activity) %></li>
-              <li class="btn btn-warning mx-1"><%= link_to('My Activity', @activities) %></li>
+              <li class="btn btn-warning mx-1"><%= link_to('Record Workout', new_activity_path) %></li>
+              <li class="btn btn-warning mx-1"><%= link_to('My Activity', activities_path) %></li>
               <li class="btn btn-warning mx-1"><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
             <% else %>
-              <li class="btn btn-warning mx-1"><%= link_to('Sign in', new_user_session_path) %></li>
+              <li class="btn btn-warning mx-1"><%= link_to('Sign in', new_user_session_path, class: "nav-link-text") %></li>
               <li class="btn btn-warning mx-1"><%= link_to('Sign up', new_user_registration_path) %></li>
             <% end %>
           </ul>

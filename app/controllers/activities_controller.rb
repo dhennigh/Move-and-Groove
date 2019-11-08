@@ -25,6 +25,10 @@ class ActivitiesController < ApplicationController
   # POST /activities.json
   def create
     @activity = Activity.new(activity_params)
+    puts @activity.workout_id
+    @activity.user = current_user
+
+    #@activity.duration = hours*60 + minutes
 
     respond_to do |format|
       if @activity.save
@@ -69,6 +73,6 @@ class ActivitiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def activity_params
-      params.fetch(:activity, {})
+      params.fetch(:activity, {}).permit(:date, :duration, :workout_id)
     end
 end
