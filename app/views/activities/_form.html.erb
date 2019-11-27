@@ -26,6 +26,21 @@
     <%= form.number_field :duration %> minutes
   </div>
 
+  <tbody>
+    <% Workouts.each do |workout| %>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-img-top">
+            <%= workout.icon_code %>
+          </div>
+          <div class="card-body font-weight-bold text-center">
+            <%= workout.name %>
+          </div>
+        </div>
+      </div>  
+    <% end %>
+  </tbody>
+
   <div class="actions">
     <%= form.submit %>
   </div>
