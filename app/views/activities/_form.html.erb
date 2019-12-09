@@ -26,18 +26,22 @@
     <%= form.number_field :duration %> minutes
   </div>
 
+  <i class="fas fa-toggle-up"></i>
+
   <tbody>
-    <% Workouts.each do |workout| %>
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-top">
-            <%= workout.icon_code %>
-          </div>
-          <div class="card-body font-weight-bold text-center">
-            <%= workout.name %>
+    <% Workout.all.each do |workout| %>
+      <% if workout.icon_code %>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-img-top">
+              <%= workout.icon_code.html_safe %>
+            </div>
+            <div class="card-body font-weight-bold text-center">
+              <%= workout.name %>
+            </div>
           </div>
         </div>
-      </div>  
+      <% end %>
     <% end %>
   </tbody>
 

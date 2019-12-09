@@ -16,7 +16,7 @@
     <% current_user.activities.each do |activity| %>
       <tr>
         <td><%= activity.workout.name %></td>
-        <td><%= activity.date %></td>
+        <td><%= activity.date.strftime("%m/%d/%Y") %></td>
         <td><%= activity.duration %> minutes</td>
         <td><%= link_to 'Show', activity %></td>
         <td><%= link_to 'Edit', edit_activity_path(activity) %></td>
@@ -27,5 +27,13 @@
 </table>
 
 <br>
+
+<% durationSum = current_user.activities.map { |activity| activity.duration }.sum %>
+
+<% totalHours = durationSum/60 %>
+<% remainingMinutes = durationSum%60 %>
+
+
+<p>Total workout duration: <%= totalHours %> hours, <%= remainingMinutes %> minutes</p>
 
 <%= link_to 'New Activity', new_activity_path %>
