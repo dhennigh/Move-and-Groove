@@ -1,5 +1,11 @@
-<h1>New Activity</h1>
+<div class="container">
+	<div class="login-container">
+		<div class="container pt-2 pb-2">
+			<h1 class="white-text">New Activity</h1>
 
-<%= render 'form', activity: @activity %>
+			<%= render 'form', activity: @activity %>
 
-<%= link_to 'Back', activities_path %>
+			<%= link_to 'Back', activities_path, class: "login-page-links" %>
+		</div>
+	</div>
+</div>

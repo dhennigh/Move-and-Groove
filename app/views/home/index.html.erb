@@ -1,6 +1,25 @@
 <div class="container">
-	<div class="jumbotron">
-		<h1>Home#index</h1>
-		<p>Find me in app/views/home/index.html.erb</p>
+	<div class="jumbotron bg-white">
+	  <h1 class="display-4">It's time to get your <span class="emphasis">GROOVE</span> on!</h1>
+	  <p class="lead emphasis sub-title">...and move it at the same time!</p>
+	  
+	  <hr class="my-4">
+	  
+	  <p class="lead">Use this app to track your activity quickly and easily.</p>
+	  <p class="lead">Be on your way to a healthier <em>you</em> in no time!</p>
+	  <br>
+		
+		<p>
+			<div class="row justify-content-center">
+	      <% if user_signed_in? %>
+	        <li class="btn btn-info mx-1 btn-lg"><%= link_to('Record Workout', new_activity_path, class: "button-link-color") %></li>
+	        <li class="btn btn-info mx-1 btn-lg"><%= link_to('My Activity', activities_path, class: "button-link-color") %></li>
+	        <li class="btn btn-info mx-1 btn-lg"><%= link_to "Sign out", destroy_user_session_path, :method => :delete, class: "button-link-color" %></li>
+	      <% else %>
+	        <li class="btn btn-info mx-1 btn-lg"><%= link_to('Sign in', new_user_session_path, class: "button-link-color") %></li>
+	        <li class="btn btn-info mx-1 btn-lg"><%= link_to('Sign up', new_user_registration_path, class: "button-link-color") %></li>
+	      <% end %>
+	    </div>
+	  </p>
 	</div>
 </div>

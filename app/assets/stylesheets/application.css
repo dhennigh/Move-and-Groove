@@ -13,7 +13,70 @@
  *= require_tree .
  *= require_self
  */
+/* Body */
+body {
+	background: rgb(249,197,150) !important;
+	background: linear-gradient(90deg, rgba(249,197,150,1) 0%, rgba(219,138,220,1) 100%) !important;
+}
 
-.nav-link-text {
-	color: green;
+li {
+	background-color: #E0176F !important;
+	border-color: #E0176F !important;
+}
+
+li:hover {
+	background-color: #FC2A85 !important;
+	border-color: #FC2A85 !important;
+}
+
+.button-link-color {
+	color: #fff;
+}
+
+.button-link-color:hover {
+	text-decoration: underline !important;
+	color: #fff !important;
+}
+
+/* Home Page */
+.emphasis {
+	font-style: italic;
+}
+
+.sub-title {
+	font-size: 2rem !important;
+}
+
+.brand-text {
+	font-size: 1.45rem !important;
+	color: #E0176F !important;
+}
+
+/* Login Page */
+.login-page-links {
+	color: #fff !important;
+}
+
+.login-label {
+	color: #fff !important;
+}
+
+.login-button {
+	background-color: #E0176F !important;
+	border-color: #E0176F !important;
+	color: #fff !important;
+}
+
+.login-button:hover {
+	background-color: #FC2A85 !important;
+	border-color: #FC2A85 !important;
+	text-decoration: underline !important;
+}
+
+.login-container {
+	background-color: rgba(252, 42, 133, .2);
+}
+
+.white-text {
+	color: #fff !important;
 }
