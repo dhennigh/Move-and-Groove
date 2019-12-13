@@ -13,24 +13,18 @@
     <% end %>
     
     <div class="row">
-      <div class="field">
-        <div class="col-md white-text"><%= form.label :date %></div>
-        <div class="col-md"><%= form.date_field :date %></div>
-      </div>
+        <div class="col-md-4 white-text justify-content-right"><%= form.label :date %></div>
+        <div class="col-md-8 justify-content-left"><%= form.date_field :date %></div>
     </div>
       
     <div class="row mt-3">
-      <div class="field">
-        <div class="col-md-4 white-text"><%= form.label :workout %></div>
-        <div class="col-md-8"><%= collection_select(:activity, :workout_id, Workout.all.sort { |a, b| a.name <=> b.name }, :id, :name, {}, { :multiple => false }) %></div>
-      </div>
+        <div class="col-md-4 white-text justify-content-right"><%= form.label :workout %></div>
+        <div class="col-md-8 justify-content-left"><%= collection_select(:activity, :workout_id, Workout.all.sort { |a, b| a.name <=> b.name }, :id, :name, {}, { :multiple => false }) %></div>
     </div>
     
-    <div class="row mt-3">
-      <div class="field">
+    <div class="row mt-3 pb-2">
         <div class="col-md-4 white-text"><%= form.label :duration %></div>
-        <div class="col-md-8"><%= form.number_field :duration %> minutes</div>
-      </div>
+        <div class="col-md-8 white-text"><%= form.number_field :duration %> minutes</div>
     </div>
 
     <div class="actions mt-3 mb-3">

@@ -80,3 +80,8 @@ li:hover {
 .white-text {
 	color: #fff !important;
 }
+
+#activity_duration {
+	max-width: 80px;
+	margin-right: 10px;
+}
