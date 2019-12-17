@@ -85,3 +85,18 @@ li:hover {
 	max-width: 80px;
 	margin-right: 10px;
 }
+
+.footer-link {
+	color: #E0176F;
+}
+
+.footer-link:hover {
+	color: #E0176F !important;
+	text-decoration: none; !important;
+	background-color: #f8f9fa !important;
+}
+
+.push {
+	height: 170px;
+}
+

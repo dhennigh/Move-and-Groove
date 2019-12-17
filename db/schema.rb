@@ -44,5 +44,4 @@ ActiveRecord::Schema.define(version: 2019_11_25_233246) do
     t.string "icon_code"
   end
 
-  add_foreign_key "activities", "workouts", column: "id"
 end
