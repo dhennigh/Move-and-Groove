@@ -19,12 +19,12 @@ body {
 	background: linear-gradient(90deg, rgba(249,197,150,1) 0%, rgba(219,138,220,1) 100%) !important;
 }
 
-li {
+li, .index-button {
 	background-color: #E0176F !important;
 	border-color: #E0176F !important;
 }
 
-li:hover {
+li:hover, .index-button:hover {
 	background-color: #FC2A85 !important;
 	border-color: #FC2A85 !important;
 }

@@ -22,7 +22,7 @@
             <td class="white-text"><%= activity.date.strftime("%m/%d/%Y") %></td>
             <td class="white-text"><%= activity.duration %> minutes</td>
             <td><%= link_to 'Edit', edit_activity_path(activity), class: "white-text ml-2" %></td>
-            <td><%= link_to 'Destroy', activity, method: :delete, data: { confirm: 'Are you sure?' }, class: "white-text ml-2" %></td>
+            <td><%= link_to 'Delete', activity, method: :delete, data: { confirm: 'Are you sure?' }, class: "white-text ml-2" %></td>
           </tr>
         <% end %>
       </tbody>
@@ -36,8 +36,12 @@
     <% remainingMinutes = durationSum%60 %>
 
 
-    <p class="white-text">Total workout duration: <%= totalHours %> hours, <%= remainingMinutes %> minutes</p>
+    <p class="white-text">Total workout duration: <strong><%= totalHours %> hours, <%= remainingMinutes %> minutes</strong></p>
+    
+    <br>
 
-    <%= link_to 'New Activity', new_activity_path, class: "white-text" %>
+    <div class="btn mx-1 index-button">
+      <%= link_to 'Create New Activity', new_activity_path, class: "button-link-color" %>
+    </div>
   </div>
 </div>
