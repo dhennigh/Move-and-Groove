@@ -78,6 +78,18 @@
           </ul>
         </div>
       </div>
+      <div class="row justify-content-center">
+        <ul class="nav navbar-nav navbar-right">
+            <% if user_signed_in? %>
+              <li class="bg-light mx-1 footer-link col-md"><%= link_to('Record Workout', new_activity_path, class: "footer-link") %></li>
+              <li class="bg-light mx-1 footer-link col-md"><%= link_to('My Activity', activities_path, class: "footer-link") %></li>
+              <li class="bg-light mx-1 footer-link col-md"><%= link_to "Sign out", destroy_user_session_path, :method => :delete, class: "footer-link" %></li>
+            <% else %>
+              <li class="bg-light mx-1 footer-link col-md"><%= link_to('Sign in', new_user_session_path, class: "footer-link") %></li>
+              <li class="bg-light mx-1 footer-link col-md"><%= link_to('Sign up', new_user_registration_path, class: "footer-link") %></li>
+            <% end %>
+          </ul>
+      </div>
     </div>
   </footer>
 </html>
